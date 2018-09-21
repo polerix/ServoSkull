@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+   <title>Current Status</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all">
+</head>
+<body id="main_body" >
+	
+	<img id="top" src="top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>Servo  Skull  Command</a></h1>
+					<div class="form_description">
+			<h3 class="redHeading">Servo  Skull  Command</h3>
+			<p class="loredHeading">Select a task for Servo Skull 690 to act in the name of the Emperor</p>
+		</div>	
+
+   <h1>Device Listing and Status</h1>
+
+   {% for pin in pins %}
+   <p>The {{ pins[pin].name }}
+   {% if pins[pin].state == true %}
+      is currently on (<a href="/{{pin}}/off">turn off</a>)
+   {% else %}
+      is currently off (<a href="/{{pin}}/on">turn on</a>)
+   {% endif %}
+   </p>
+   {% endfor %}
+
+   {% if message %}
+   <h2>{{ message }}</h2>
+   {% endif %}
+
+		<div id="footer">
+			There is the Emperor, and there is war; that is all.</a>
+		</div>
+	</div>
+	<img id="bottom" src="bottom.png" alt="">
+	
+	<img id="40kEaglelogo" src="Aquila_transparent.png" alt="">
+	</body>
+</html>

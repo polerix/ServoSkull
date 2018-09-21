@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Servo Skull Command Form</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all">
+<link rel="stylesheet" type="text/css" href="crt.css" media="all">
+<script type="text/javascript" src="view.js"></script>
+<script type="text/javascript" src="calendar.js"></script>
+</head>
+  <span class="crt">
+<body id="main_body" >
+	
+	<img id="top" src="imgs/top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>Servo  Skull  Command</a></h1>
+		<form id="form_25789" class="appnitro"  method="post" action="">
+					<div class="form_description">
+			<h3 class="redHeading">Servo  Skull  Command</h3>
+			<p class="loredHeading">Select a task for Servo Skull 690 to act in the name of the Emperor</p>
+		</div>						
+			<ul >
+			
+					<li id="li_3" >
+		<label class="description" for="element_3">Select an ACTION </label>
+		<div>
+		<select class="element select medium" id="element_3" name="element_3"> 
+			<option value="" selected="selected"></option>
+<option value="1" >Select an action</option>
+<option value="2" >Stand by</option>
+<option value="3" >Turn on IR LED</option>
+<option value="4" >Turn off IR LED</option>
+<option value="5" >Turn on SILED</option>
+<option value="6" >Turn off SILED</option>
+<option value="7" >Turn on HFI</option>
+<option value="8" >Turn off HFI</option>
+<option value="9" >Turn on Laser</option>
+<option value="10" >Turn off Laser</option>
+<option value="11" >Turn on alarm sound</option>
+<option value="12" >Turn off alarm sound</option>
+<option value="13" >Turn on quotation sound</option>
+<option value="14" >Turn off quotation sound</option>
+<option value="15" >Turn on Webcam</option>
+<option value="16" >Turn off Webcam</option>
+<option value="17" >Turn on audio recording</option>
+<option value="18" >Turn off audio recording</option>
+<option value="19" >Email video recording</option>
+<option value="20" >Email audio recording</option>
+<option value="21" >Wait for touch sensor</option>
+<option value="22" >Wait for Email</option>
+<option value="23" >Shut down</option>
+
+		</select>
+		</div><p class="guidelines" id="guide_3"><small>Select an action to perform</small></p> 
+		</li>		<li id="li_1" >
+		<label class="description" for="element_1">Date </label>
+		<span>
+			<input id="element_1_1" name="element_1_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="element_1_1">MM</label>
+		</span>
+		<span>
+			<input id="element_1_2" name="element_1_2" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="element_1_2">DD</label>
+		</span>
+		<span>
+	 		<input id="element_1_3" name="element_1_3" class="element text" size="4" maxlength="4" value="" type="text">
+			<label for="element_1_3">YYYY</label>
+		</span>
+	
+		<span id="calendar_1">
+			<img id="cal_img_1" class="datepicker" src="calendar.gif" alt="Pick a date.">	
+		</span>
+		<script type="text/javascript">
+			Calendar.setup({
+			inputField	 : "element_1_3",
+			baseField    : "element_1",
+			displayArea  : "calendar_1",
+			button		 : "cal_img_1",
+			ifFormat	 : "%B %e, %Y",
+			onSelect	 : selectDate
+			});
+		</script>
+		 
+		</li>		<li id="li_2" >
+		<label class="description" for="element_2">Time </label>
+		<span>
+			<input id="element_2_1" name="element_2_1" class="element text " size="2" type="text" maxlength="2" value=""/> : 
+			<label>HH</label>
+		</span>
+		<span>
+			<input id="element_2_2" name="element_2_2" class="element text " size="2" type="text" maxlength="2" value=""/> : 
+			<label>MM</label>
+		</span>
+		<span>
+			<input id="element_2_3" name="element_2_3" class="element text " size="2" type="text" maxlength="2" value=""/>
+			<label>SS</label>
+		</span>
+		<span>
+			<select class="element select" style="width:4em" id="element_2_4" name="element_2_4">
+				<option value="AM" >AM</option>
+				<option value="PM" >PM</option>
+			</select>
+			<label>AM/PM</label>
+		</span> 
+		</li>
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="25789" />
+			    
+				<input id="saveForm" class="fsSubmitButton" type="submit" name="submit" value="Submit" />
+		</li>
+			</ul>
+		</form>	
+		<div id="footer">
+			There is the Emperor, and there is war; that is all.</a>
+		</div>
+	</div>
+	<img id="bottom" src="imgs/bottom.png" alt="">
+	
+	<img id="40kEaglelogo" src="imgs/Aquila_transparent.png" alt="">
+	</body>
+</html>

@@ -1,0 +1,104 @@
+<html>
+<head>
+<meta content="text/html; charset=ISO-8859-1"
+http-equiv="content-type">
+<title>INDEX</title>
+<link rel="stylesheet" type="text/css" href="css/view.css" media="all"><link rel="stylesheet" type="text/css" href="css/crt.css" media="all">
+</head>
+<body style="color: rgb(0, 0, 0); background-color: rgb(102, 0, 0); background-image: url(imgs/bleck.png);"alink="#330000" link="#330000" vlink="#330000">
+
+  
+  <style>
+{body: font-family: arial;}
+div.row span{position: absolute;}
+div.row span:nth-child(1){left: 0px;}
+div.row span:nth-child(2){left: 70px;}
+div.row span:nth-child(3){left: 160px;}
+div.row span:nth-child(4){left: 250px;}
+  </style>
+  
+  <meta http-equiv="refresh" content="15">
+
+</head><body style="color: rgb(0, 0, 0); background-color: rgb(102, 0, 0); background-image: url(imgs/bleck.png);"alink="#330000" link="#330000" vlink="#330000">
+<table style="text-align: left; width: 640px; background-color: rgb(153, 0, 0); margin-left: auto; margin-right: auto; font-family: Courier New,Courier,monospace;" border="0" cellpadding="0" cellspacing="0">
+  <span class="crt">
+  <tbody>
+    <tr>
+      <td colspan="3" rowspan="1" style="vertical-align: top;"><img id="top" src="imgs/top.png" alt=""></td>
+    </tr>
+    <tr>
+      <td colspan="3" rowspan="1" style="vertical-align: top; background-color: red;"> <br>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" rowspan="1" style="vertical-align: top;">
+      <h3 class="redHeading">&nbsp;Servo Skull 690<br>
+      </h3>
+&nbsp; Text to Speech Log<br>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" rowspan="1" style="vertical-align: top;"> <br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; width: 20px;"><br>
+      </td>
+      <td style="vertical-align: top; width: 600px; background-color: rgb(204, 0, 0);">
+      <h1><br>
+      </h1>
+&nbsp; What we do is what we say and document it<br>
+      <br>
+{# Define "row" class with tab stops #} {# Refresh the page every 15
+seconds #}
+      <h1>piHole Servo Skull 690 - Message log</h1>
+{# Column headers #}
+      <div class="row"> <span><b>When?</b></span> <span><b>Where?</b></span>
+      <span><b>Who?</b></span> <span><b>What?</b></span> </div>
+      <br>
+{# Jinja2 loop displaying each entry tuple in data parameter "log" #}
+{% for entry in log %}
+      <div class="row"> <span>{{entry.0}}</span> <span>{{entry.1}}</span>
+      <span>{{entry.2}}</span>
+      <span>{{entry.3}}</span> </div>
+      <br>
+{% endfor %} <br>
+      <a href="/say">Send text-to-speech message</a><br>
+      <a href="/">PiHole Main menu</a> <br>
+      </td>
+      <td style="vertical-align: top; width: 20px;"> <br>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" rowspan="1" style="vertical-align: top; width: 640px;"><img style="width: 613px; height: 10px;" id="bottom" src="imgs/bottom.png" alt=""></td>
+    </tr>
+    <tr align="center">
+      <td colspan="3" rowspan="1" style="vertical-align: top; width: 640px;">
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <script src="js/index.js"></script>
+      <div id="quoteContainer"> <img width:="" 187px;="" height:="" 71px;="" id="40kEaglelogo" src="imgs/Aquila_transparent.png" alt=""></div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" rowspan="1" style="vertical-align: top;"><img id="top" src="imgs/top.png" alt=""></td>
+    </tr>
+    <tr align="center">
+      <td colspan="3" rowspan="1" style="vertical-align: top; width: 640px; background-color: red;">*
+[ <a href="Index.html">INDEX</a> ] * [ <a href="Orders.html">ORDERS</a>
+]
+* [ <a href="Navigation.html">NAVIGATION</a>
+]
+* [ <a href="Video.html">VIDEO</a> ] * [ <a href="Audio.html">AUDIO</a>
+] * [ <a href="ABOUT.HTML">ABOUT</a> ] * </td>
+    </tr>
+    <tr>
+      <td colspan="3" rowspan="1" style="vertical-align: top; width: 640px;"><img id="bottom" src="imgs/bottom.png" alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<br style="font-family: Courier New,Courier,monospace;">
+
+<br style="font-family: Courier New,Courier,monospace;">
+
+</span class="crt"></body></html>

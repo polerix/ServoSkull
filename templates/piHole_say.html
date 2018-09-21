@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta content="text/html; charset=ISO-8859-1"
+http-equiv="content-type">
+<title>INDEX</title>
+<link rel="stylesheet" type="text/css" href="css/view.css" media="all"><link rel="stylesheet" type="text/css" href="css/crt.css" media="all">
+</head>
+<body style="color: rgb(0, 0, 0); background-color: rgb(102, 0, 0); background-image: url(imgs/bleck.png);"alink="#330000" link="#330000" vlink="#330000">
+  <h1>piHole - Send text-to-speech message</h1>
+  <form action="/say" method="post">
+    Who are you?<br>
+    {# if no name has been entered, give the focus to the name field #}
+    <input value="{{name}}" {%="" if="" name="name" is="" not="" defined="" autofocus{%="" endif="" %}="" type="text"><br>
+    What do you want to say?<br>
+    {# otherwise, position the cursor on the text field #}
+    <input {%="" if="" name="text" is="" defined="" autofocus{%="" endif="" %}="" type="text"><br>
+    <input name="say" value="Send" type="submit">
+  </form>
+  <br>
+  <a href="piHole_log.html">View message log</a><br>
+  <a href="piHole_root.html">Main menu</a>
