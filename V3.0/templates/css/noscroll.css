@@ -1,0 +1,23 @@
+.element, .outer-container {
+ width: 100%;
+ height: 100%;
+}
+ 
+.outer-container {
+ border: 0px solid purple;
+ position: relative;
+ overflow: hidden;
+}
+ 
+.inner-container {
+ position: absolute;
+ left: 0;
+ overflow-x: hidden;
+ overflow-y: scroll;
+}
+ 
+.inner-container::-webkit-scrollbar {
+ display: none;
+}
+
+* { overflow: -moz-scrollbars-none !important; } 

@@ -1,0 +1,46 @@
+body { margin:0; }
+
+p {
+    border: 0px0;
+    padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10;
+    overflow: hidden;
+    background-color: #990000;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    border: 2px solid red;
+    color: #FF0000;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    text-shadow: 2px 2px #990000
+}
+
+/* Change the link color to #330000 (light red) on hover */
+li a:hover {
+    background-color: #330000;
+}
+
+body {
+    color: red;
+    font-family: courier;
+    font-size: .85em;
+}
+
+@font-face {
+        font-size: .4em;
+        margin: 0;
+        font-family: "Courier New";
+}
+
