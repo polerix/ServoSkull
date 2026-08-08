@@ -1,0 +1,35 @@
+{
+  "registry": {
+    "690": {
+      "designation": "SERVO-SKULL.690 [SURVEILLANCE]",
+      "host": "192.168.1.90",
+      "port": 22,
+      "username": "pi",
+      "keyFile": "~/.ssh/id_rsa",
+      "password": null,
+      "description": "Primary surveillance unit. Oculus augmetic. Pict-capture enabled.",
+      "blessing": "May the Machine Spirit grant thee clear sight."
+    },
+    "691": {
+      "designation": "SERVO-SKULL.691 [MOBILITY]",
+      "host": "192.168.1.91",
+      "port": 22,
+      "username": "pi",
+      "keyFile": "~/.ssh/id_rsa",
+      "password": null,
+      "description": "Mobility chassis unit. Locomotor servos nominal.",
+      "blessing": "May thy wheels turn true upon the blessed tarmac."
+    },
+    "001": {
+      "designation": "SERVO-SKULL.001 [LOCAL-DEBUG]",
+      "host": "localhost",
+      "port": 22,
+      "username": null,
+      "keyFile": null,
+      "password": null,
+      "description": "Local debug unit. Shell passthrough mode.",
+      "blessing": "The Omnissiah watches over local operations.",
+      "local": true
+    }
+  }
+}

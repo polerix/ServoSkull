@@ -1,0 +1,69 @@
+{
+  "sleeves": {
+    "1": {
+      "name": "SURVEILLANCE-SLEEVE-MK3",
+      "description": "Installs webcam daemon, motion detection, pict-capture suite",
+      "category": "Personality Sleeve",
+      "commands": [
+        "sudo apt-get update -qq",
+        "sudo apt-get install -y fswebcam motion",
+        "sudo systemctl enable motion",
+        "echo '[ADEPTUS] Surveillance sleeve injected. Pict-capture online.'"
+      ]
+    },
+    "2": {
+      "name": "VOXCASTER-SLEEVE-MK2",
+      "description": "Installs text-to-speech engine (festival/espeak) and sound playback",
+      "category": "Personality Sleeve",
+      "commands": [
+        "sudo apt-get update -qq",
+        "sudo apt-get install -y festival espeak alsa-utils",
+        "echo 'Praise the Omnissiah' | festival --tts"
+      ]
+    },
+    "3": {
+      "name": "LOCOMOTOR-PACKAGE",
+      "description": "Installs servo control libs and GPIO access for mobility chassis",
+      "category": "Service Package",
+      "commands": [
+        "sudo apt-get update -qq",
+        "sudo apt-get install -y python3-gpiozero python3-pigpio",
+        "sudo systemctl enable pigpiod",
+        "sudo systemctl start pigpiod",
+        "echo '[ADEPTUS] Locomotor package installed. Servos awaiting activation.'"
+      ]
+    },
+    "4": {
+      "name": "OMNISSIAH-OS-UPDATE",
+      "description": "Full system update — applies all sanctioned machine spirit blessings",
+      "category": "OS Update",
+      "commands": [
+        "sudo apt-get update",
+        "sudo apt-get upgrade -y",
+        "sudo apt-get autoremove -y",
+        "echo '[ADEPTUS] Machine spirit updated. Glory to the Omnissiah.'"
+      ]
+    },
+    "5": {
+      "name": "NOSTROMO-COMMS-PACKAGE",
+      "description": "Installs networking tools, SSH hardening, fail2ban intrusion ward",
+      "category": "Service Package",
+      "commands": [
+        "sudo apt-get update -qq",
+        "sudo apt-get install -y fail2ban nmap net-tools",
+        "sudo systemctl enable fail2ban",
+        "echo '[ADEPTUS] Comms package active. Vox-channel secured.'"
+      ]
+    },
+    "6": {
+      "name": "ILLUMINATOR-SLEEVE",
+      "description": "Configures IR/LED lighting and laser diode GPIO control scripts",
+      "category": "Personality Sleeve",
+      "commands": [
+        "sudo apt-get update -qq",
+        "sudo apt-get install -y python3-rpi.gpio",
+        "echo '[ADEPTUS] Illuminator sleeve mounted. Lumen output ready.'"
+      ]
+    }
+  }
+}
