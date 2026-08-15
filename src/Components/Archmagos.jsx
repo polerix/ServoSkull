@@ -1,6 +1,4 @@
 import React from "react";
-import belisarius from "../Assets/BelisariusCawl.jpg";
-import fake from "../Assets/wallpaper3.jpg";
 import crawl from "../Assets/crawl.jpg";
 
 const Archmagos = () => {

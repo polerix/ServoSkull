@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import warhammer from "../Assets/warhammer.png";
 import warhammerVideo from "../Assets/file.mp4";
-import { GiDreadSkull } from "react-icons/gi";
 import { Link } from "react-scroll";
 import { AiOutlineClose } from "react-icons/ai";
 import mecha from "../Assets/son.png";
@@ -35,7 +34,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <img className="md:mx-auto" src={warhammer}></img>
+        <img className="md:mx-auto" src={warhammer} alt="Adeptus Mechanicus crest"></img>
         <ul className="hidden sm:flex text-[#D4FFFD] mt-2 text-sm md:text-xl font-bold font-copperplate   h-[100px]">
           <li className="mx-5 mt-2 hover:text-[#72eaf6] hover:border-t-2 border-[#72EAF6]">
             <Link to="Archmagos" smooth={true} duration={500}>
@@ -53,6 +52,7 @@ const Navbar = () => {
           {!nav ? (
             <img
               src={mecha}
+              alt="Open menu"
               className="h-30 top-0 right-0  w-24  absolute  sm:hidden md:hidden outline-none cursor-pointer "
             ></img>
           ) : (

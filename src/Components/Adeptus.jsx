@@ -1,5 +1,4 @@
 import React from "react";
-import wallPaper from "../Assets/wallpaper2.jpg";
 
 const Adeptus = () => {
   return (
