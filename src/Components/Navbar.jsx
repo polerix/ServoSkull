@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import warhammer from "../Assets/warhammer.png";
 import warhammerVideo from "../Assets/file.mp4";
 import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import mecha from "../Assets/son.png";
 
@@ -46,6 +47,9 @@ const Navbar = () => {
               Cult Mechanicus
             </Link>
           </li>
+          <li className="md:mx-5 mt-2 hover:text-[#72eaf6] hover:border-t-2 border-[#72EAF6]">
+            <RouterLink to="/codex">Codex</RouterLink>
+          </li>
         </ul>
 
         <div onClick={handleNav} className="block md:hidden top-0 right-0 ">
@@ -86,6 +90,9 @@ const Navbar = () => {
               <Link to="CultMechanicus" smooth={true} duration={500}>
                 Cult Mechanicus
               </Link>
+            </li>
+            <li className="md:mx-5 mt-2 hover:text-[#72eaf6] hover:border-t-2 border-[#72EAF6]">
+              <RouterLink to="/codex">Codex</RouterLink>
             </li>
           </ul>
         </div>

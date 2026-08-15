@@ -4,6 +4,11 @@ One entry per physical unit. Copy the block, fill it in, append below
 the divider. This is the operative register — keep it current as
 units are built, redeployed, or retired.
 
+Naming a unit or picking its role/personality? See
+[`LORE_COMPENDIUM.md`](./LORE_COMPENDIUM.md) — §2 for canon function
+roles to base a `CLASS`/subsystem set on, §1 and §4 for
+backstory-driven Legacy-Class inspiration.
+
 ---
 
 ## Register Fields

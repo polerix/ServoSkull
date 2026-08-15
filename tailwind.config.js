@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import twElementsPlugin from 'tw-elements/dist/plugin.cjs'
+import typographyPlugin from '@tailwindcss/typography'
 
 export default {
   content: [
@@ -14,5 +15,5 @@ export default {
       },
     },
   },
-  plugins: [twElementsPlugin],
+  plugins: [twElementsPlugin, typographyPlugin],
 }

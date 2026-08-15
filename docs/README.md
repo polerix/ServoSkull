@@ -13,6 +13,7 @@ showcase presents the project; these documents run it.
 | [`PROGRAMMING_REFERENCE.md`](./PROGRAMMING_REFERENCE.md) | Command/control model, behavioral priority stack, comm channels — the logic layer, hardware-agnostic |
 | [`FIRMWARE.md`](./FIRMWARE.md) | Raspberry Pi build target — GPIO map, subsystem scripts, install/boot sequence |
 | [`REGISTRATION_TRACKING.md`](./REGISTRATION_TRACKING.md) | Per-unit asset register — one entry per physical skull you build/deploy |
+| [`LORE_COMPENDIUM.md`](./LORE_COMPENDIUM.md) | Canon research — servo-skull roles, named exceptions, and status precedent, sourced from Black Library fiction |
 
 ## Status note
 

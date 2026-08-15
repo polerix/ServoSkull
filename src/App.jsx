@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Navbar from './Components/Navbar';
@@ -7,6 +8,19 @@ import Center from './Components/Center';
 import Adeptus from './Components/Adeptus';
 import Archmagos from './Components/Archmagos';
 import Showcase from './Components/Showcase';
+import CodexIndex from './Pages/CodexIndex';
+import CodexDoc from './Pages/CodexDoc';
+
+function Home() {
+  return (
+    <>
+      <Center></Center>
+      <Adeptus></Adeptus>
+      <Archmagos></Archmagos>
+      <Showcase></Showcase>
+    </>
+  );
+}
 
 function App() {
   AOS.init({
@@ -17,10 +31,11 @@ function App() {
 
     <div>
       <Navbar></Navbar>
-      <Center></Center>
-      <Adeptus></Adeptus>
-      <Archmagos></Archmagos>
-      <Showcase></Showcase>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/codex" element={<CodexIndex />} />
+        <Route path="/codex/:doc" element={<CodexDoc />} />
+      </Routes>
     </div>
 
   );
