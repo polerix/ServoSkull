@@ -1,0 +1,16 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+#root {
+  @apply overflow-x-hidden;
+}
+
+@font-face {
+  font-family: "Copperplate";
+  src: url("./fonts/CopperplateGothic.ttf") format('truetype');
+
+}
