@@ -1,8 +1,11 @@
 # Servitor Skull Registration & Tracking
 
-One entry per physical unit. Copy the block, fill it in, append below
-the divider. This is the operative register — keep it current as
-units are built, redeployed, or retired.
+One entry per physical unit. The operative register itself lives in
+[`src/data/units.json`](../src/data/units.json) and renders live at
+[`/codex/registration-tracking`](https://polerix.github.io/ServoSkull/#/codex/registration-tracking)
+— this file documents the schema those entries follow. Keep the two in
+sync: if a field is added/renamed here, mirror it in `units.json` and
+`src/Pages/RegistryPage.jsx`.
 
 Naming a unit or picking its role/personality? See
 [`LORE_COMPENDIUM.md`](./LORE_COMPENDIUM.md) — §2 for canon function
@@ -29,8 +32,20 @@ STATUS NOTES:           [circumstances, last known state]
 LAST UPDATED:           [date]
 ```
 
----
+Corresponding `units.json` shape (camelCase field names, same meanings):
 
-## Current Entries
-
-*(none yet — first unit goes here)*
+```json
+{
+  "designation": "",
+  "class": "FIRMWARE-CLASS",
+  "personaLayer": "",
+  "hardware": "",
+  "gpioMapRef": "",
+  "commChannel": "",
+  "networkId": "",
+  "firstDeployed": "",
+  "status": "BUILDING",
+  "statusNotes": "",
+  "lastUpdated": ""
+}
+```

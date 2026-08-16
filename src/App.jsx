@@ -10,6 +10,7 @@ import Archmagos from './Components/Archmagos';
 import Showcase from './Components/Showcase';
 import CodexIndex from './Pages/CodexIndex';
 import CodexDoc from './Pages/CodexDoc';
+import RegistryPage from './Pages/RegistryPage';
 
 function Home() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/codex" element={<CodexIndex />} />
+        <Route path="/codex/registration-tracking" element={<RegistryPage />} />
         <Route path="/codex/:doc" element={<CodexDoc />} />
       </Routes>
     </div>
