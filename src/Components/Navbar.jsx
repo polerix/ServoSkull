@@ -38,14 +38,10 @@ const Navbar = () => {
         <img className="pointer-events-auto md:mx-auto" src={warhammer} alt="Adeptus Mechanicus crest"></img>
         <ul className="pointer-events-auto hidden sm:flex text-[#D4FFFD] mt-2 text-sm md:text-xl font-bold font-copperplate   h-[100px]">
           <li className="mx-5 mt-2 hover:text-[#72eaf6] hover:border-t-2 border-[#72EAF6]">
-            <Link to="Archmagos" smooth={true} duration={500}>
-              Archmagos Belisarius Cawl
-            </Link>
+            <RouterLink to="/codex/programming-reference">Design Servitor Skull</RouterLink>
           </li>
           <li className="md:mx-5 mt-2 hover:text-[#72eaf6] hover:border-t-2 border-[#72EAF6]">
-            <Link to="CultMechanicus" smooth={true} duration={500}>
-              Cult Mechanicus
-            </Link>
+            <RouterLink to="/codex">Codex Registry</RouterLink>
           </li>
           <li className="md:mx-5 mt-2 hover:text-[#72eaf6] hover:border-t-2 border-[#72EAF6]">
             <RouterLink to="/codex">Codex</RouterLink>
@@ -82,14 +78,10 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="md:mx-5 mt-2 hover:text-[#72eaf6] hover:border-t-2 border-[#72EAF6]">
-              <Link to="Archmagos" smooth={true} duration={500}>
-                Archmagos Belisarius Cawl
-              </Link>
+              <RouterLink to="/codex/programming-reference">Design Servitor Skull</RouterLink>
             </li>
             <li className="md:mx-5 mt-2 hover:text-[#72eaf6] hover:border-t-2 border-[#72EAF6]">
-              <Link to="CultMechanicus" smooth={true} duration={500}>
-                Cult Mechanicus
-              </Link>
+              <RouterLink to="/codex">Codex Registry</RouterLink>
             </li>
             <li className="md:mx-5 mt-2 hover:text-[#72eaf6] hover:border-t-2 border-[#72EAF6]">
               <RouterLink to="/codex">Codex</RouterLink>
