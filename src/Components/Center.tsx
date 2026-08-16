@@ -16,13 +16,13 @@ const Center = () => {
         </h1>
         <div className="mt-5 flex flex-wrap items-center justify-center gap-4">
           <Link
-            to="/codex/registration-tracking"
+            to="/codex"
             className="bg-[#40E0D0] opacity-80 border-solid border-3 border-[#D4FFFD] rounded-lg p-2 md:p-3 font-copperplate hover:bg-[#72eaf6]"
           >
             Track Servitor Skull
           </Link>
           <Link
-            to="/codex/registration-tracking?ref=field-reference"
+            to="/codex/register"
             className="bg-transparent opacity-80 border-solid border-3 border-[#D4FFFD] rounded-lg p-2 md:p-3 font-copperplate text-[#D4FFFD] hover:bg-[#72eaf6] hover:text-black"
           >
             Register Servitor Skull

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { docs } from './docsRegistry';
+import { docs } from '../docsRegistry';
 
-const CodexIndex = () => {
+const DocsIndex = () => {
   return (
     <div className="min-h-screen bg-black px-6 py-16 sm:px-12">
       <div className="mx-auto max-w-4xl">
@@ -18,7 +18,7 @@ const CodexIndex = () => {
           {docs.map((doc) => (
             <Link
               key={doc.slug}
-              to={`/codex/${doc.slug}`}
+              to={`/codex/docs/${doc.slug}`}
               className="block rounded-lg border border-[#2a4a48] bg-[#0a1615] p-6 transition hover:border-[#72eaf6] hover:bg-[#0f1f1e]"
             >
               <h2 className="font-copperplate text-xl text-[#72eaf6]">
@@ -40,4 +40,4 @@ const CodexIndex = () => {
   );
 };
 
-export default CodexIndex;
+export default DocsIndex;

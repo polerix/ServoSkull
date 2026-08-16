@@ -1,15 +1,15 @@
 import { useParams, Navigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { getDoc } from './docsRegistry';
+import { getDoc } from '../docsRegistry';
 import CodexNav from './CodexNav';
 
-const CodexDoc = () => {
+const DocPage = () => {
   const { doc: slug } = useParams();
   const doc = getDoc(slug);
 
   if (!doc) {
-    return <Navigate to="/codex" replace />;
+    return <Navigate to="/codex/docs" replace />;
   }
 
   return (
@@ -27,4 +27,4 @@ const CodexDoc = () => {
   );
 };
 
-export default CodexDoc;
+export default DocPage;

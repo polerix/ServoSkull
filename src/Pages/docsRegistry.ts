@@ -6,7 +6,14 @@ import firmware from '../../docs/FIRMWARE.md?raw';
 import registrationTracking from '../../docs/REGISTRATION_TRACKING.md?raw';
 import loreCompendium from '../../docs/LORE_COMPENDIUM.md?raw';
 
-export const docs = [
+export interface Doc {
+  slug: string;
+  title: string;
+  blurb: string;
+  content: string;
+}
+
+export const docs: Doc[] = [
   {
     slug: 'programming-reference',
     title: 'Programming Reference',
@@ -33,6 +40,6 @@ export const docs = [
   },
 ];
 
-export function getDoc(slug) {
+export function getDoc(slug: string | undefined): Doc | undefined {
   return docs.find((d) => d.slug === slug);
 }
