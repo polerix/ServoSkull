@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Center = () => {
   return (
@@ -13,9 +14,20 @@ const Center = () => {
           <br /> "There is no constancy in flesh, only decay." <br />
           "There is no certainty in flesh but death." <br />— Credo Omnissiah
         </h1>
-        <button className="bg-[#40E0D0] opacity-80  border-solid border-3 border-[#D4FFFD] rounded-lg mt-5 p-2 md:p-3 font-copperplate hover:bg-[#72eaf6]">
-          Explore
-        </button>
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-4">
+          <Link
+            to="/codex/registration-tracking"
+            className="bg-[#40E0D0] opacity-80 border-solid border-3 border-[#D4FFFD] rounded-lg p-2 md:p-3 font-copperplate hover:bg-[#72eaf6]"
+          >
+            Track Servitor Skull
+          </Link>
+          <Link
+            to="/codex/registration-tracking?ref=field-reference"
+            className="bg-transparent opacity-80 border-solid border-3 border-[#D4FFFD] rounded-lg p-2 md:p-3 font-copperplate text-[#D4FFFD] hover:bg-[#72eaf6] hover:text-black"
+          >
+            Register Servitor Skull
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import CodexNav from './CodexNav';
@@ -94,6 +96,19 @@ const UnitCard = ({ unit }) => (
 
 const RegistryPage = () => {
   const fieldRefDoc = getDoc('registration-tracking');
+  const [searchParams] = useSearchParams();
+  const [fieldRefOpen, setFieldRefOpen] = useState(false);
+  const fieldRefRef = useRef(null);
+
+  // Deep link from the Home hero's "Register Servitor Skull" button
+  // (?ref=field-reference): open the field reference details and
+  // scroll it into view.
+  useEffect(() => {
+    if (searchParams.get('ref') === 'field-reference' && fieldRefRef.current) {
+      setFieldRefOpen(true);
+      fieldRefRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [searchParams]);
 
   return (
     <div className="min-h-screen bg-black px-6 py-16 sm:px-12">
@@ -128,7 +143,12 @@ const RegistryPage = () => {
         </div>
 
         {fieldRefDoc && (
-          <details className="mt-12 rounded-lg border border-[#2a4a48] bg-[#0a1615] p-6">
+          <details
+            ref={fieldRefRef}
+            open={fieldRefOpen}
+            onToggle={(e) => setFieldRefOpen(e.target.open)}
+            className="mt-12 rounded-lg border border-[#2a4a48] bg-[#0a1615] p-6"
+          >
             <summary className="cursor-pointer font-copperplate text-lg text-[#72eaf6]">
               Field reference
             </summary>
