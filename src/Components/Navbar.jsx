@@ -22,8 +22,8 @@ const Navbar = () => {
         muted
         src={warhammerVideo}
       ></video>
-      <div className=" h-full md:w-full grid grid-cols-3 m-auto justify-items-center absolute md:fixed z-10 overflow-hidden">
-        <ul className="hidden px-3 sm:flex text-[#D4FFFD]  mt-2 md:text-xl font-bold font-copperplate h-[100px]">
+      <div className=" h-[800px] md:w-full grid grid-cols-3 m-auto justify-items-center absolute md:fixed z-10 overflow-hidden pointer-events-none">
+        <ul className="pointer-events-auto hidden px-3 sm:flex text-[#D4FFFD]  mt-2 md:text-xl font-bold font-copperplate h-[100px]">
           <li className="mx-3 mt-2 hover:text-[#72eaf6] hover:border-t-2 border-[#72EAF6]">
             <Link to="home" smooth={true} duration={500}>
               Home
@@ -35,8 +35,8 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <img className="md:mx-auto" src={warhammer} alt="Adeptus Mechanicus crest"></img>
-        <ul className="hidden sm:flex text-[#D4FFFD] mt-2 text-sm md:text-xl font-bold font-copperplate   h-[100px]">
+        <img className="pointer-events-auto md:mx-auto" src={warhammer} alt="Adeptus Mechanicus crest"></img>
+        <ul className="pointer-events-auto hidden sm:flex text-[#D4FFFD] mt-2 text-sm md:text-xl font-bold font-copperplate   h-[100px]">
           <li className="mx-5 mt-2 hover:text-[#72eaf6] hover:border-t-2 border-[#72EAF6]">
             <Link to="Archmagos" smooth={true} duration={500}>
               Archmagos Belisarius Cawl
@@ -52,7 +52,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div onClick={handleNav} className="block md:hidden top-0 right-0 ">
+        <div onClick={handleNav} className="pointer-events-auto block md:hidden top-0 right-0 ">
           {!nav ? (
             <img
               src={mecha}
@@ -66,8 +66,8 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "fixed w-[300px] bg-black-500 h-screen text-white top-20 left-0  duration-300 z-10 flex flex-col"
-              : "absolute left-[-100%]"
+              ? "pointer-events-auto fixed w-[300px] bg-black-500 h-screen text-white top-20 left-0  duration-300 z-10 flex flex-col"
+              : "pointer-events-auto absolute left-[-100%]"
           }
         >
           <ul className="md:hidden flex flex-col gap-10 text-[#D4FFFD] font-bold font-copperplate text-lg transition-transform">
