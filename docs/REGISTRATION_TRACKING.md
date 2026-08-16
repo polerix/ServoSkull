@@ -24,7 +24,7 @@ GPIO MAP REF:           [link/path to this unit's specific pin assignments, if i
 COMM CHANNEL:           [local HTTP / SSH-TUI / other]
 NETWORK ID:             [hostname, IP, or service number used by the TUI's skulls.json]
 FIRST DEPLOYED:         [date/context]
-STATUS:                 [ACTIVE / BUILDING / DECOMMISSIONED / LOST / DESTROYED]
+STATUS:                 [ACTIVE / BUILDING / DAMAGED / CORRUPTED / DECOMMISSIONED / LOST / DESTROYED]
 STATUS NOTES:           [circumstances, last known state]
 LAST UPDATED:           [date]
 ```

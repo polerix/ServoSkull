@@ -76,10 +76,11 @@ these units.
 | **Video/Surveillance** | `video.stream.start/stop`, `video.snapshot` | Treat as opt-in per session, not always-on, unless you've deliberately decided otherwise — this is the subsystem most likely to raise privacy questions if this unit is ever around anyone who didn't agree to it. | Pict-recorder / archivist; also the surveillance half of Inquisitorial retinue |
 | **Lighting** | `lamp.set(pattern)` | Maps to `weblamp.py` / `blinking_led.py` in the current Pi scripts. | Censer-bearer / ritual (candle/censer-light) |
 
-Two roles from the lore compendium have no subsystem yet, flagged as
+Three roles from the lore compendium have no subsystem yet, flagged as
 gaps rather than built speculatively: **guardian/armed patrol**
-(mounted weapon + threat response) and **medicae/field-surgical**
-(tool-arm attachment). Add these only if a real unit needs them.
+(mounted weapon + threat response), **medicae/field-surgical**
+(tool-arm attachment), and **maintenance/honor-guard** (jaw-mounted
+polishing/upkeep tooling). Add these only if a real unit needs them.
 
 ---
 
