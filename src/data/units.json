@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "designation": "Father",
+    "class": "LEGACY-CLASS",
+    "personaLayer": "Blind-guide familiar — literally the skull of Epiphani's own father, Phalanghast, her former guide. Blue bionic eyes serve as her actual eyes via a mind-link; jaw unspools vellum message-scrolls instead of speaking; hidden cranial compartment smuggles a stasis casket.",
+    "hardware": "N/A — canon reference, not a physical build",
+    "gpioMapRef": "N/A",
+    "commChannel": "N/A",
+    "networkId": "N/A",
+    "firstDeployed": "Rob Sanders, Atlas Infernal",
+    "status": "ACTIVE",
+    "statusNotes": "Canon reference, not a physical build. Manhandled by a Thousand Sons sorcerer, nearly lost, and recovered over the course of the novel — treated by every character around Epiphani as something closer to a companion than equipment. See LORE_COMPENDIUM.md §1.",
+    "lastUpdated": "2026-08-16"
+  },
+  {
+    "designation": "Confabulari-66",
+    "class": "LEGACY-CLASS",
+    "personaLayer": "Vox-relay/voice for the lexorcist Raman Synk, who has \"a cadaver's face and missing jaw.\" Floats on cranial cable-tethers \"almost temple to temple\" with him; his every word \"proceeds from the vox-hailer built into\" it. Listed as a character in its own right (\"CONFABULARI 66, Servo-skull\") in The Burden of Loyalty's dramatis personae.",
+    "hardware": "N/A — canon reference, not a physical build",
+    "gpioMapRef": "N/A",
+    "commChannel": "N/A",
+    "networkId": "N/A",
+    "firstDeployed": "Various, Heralds of the Siege (Horus Heresy anthology)",
+    "status": "CORRUPTED",
+    "statusNotes": "Canon reference, not a physical build. Turned to Chaos alongside Synk (\"the hunter had become one of his hunted\") and gained a fourth, mutated eye socket. Also appears in The Burden of Loyalty. See LORE_COMPENDIUM.md §1.",
+    "lastUpdated": "2026-08-16"
+  }
+]
