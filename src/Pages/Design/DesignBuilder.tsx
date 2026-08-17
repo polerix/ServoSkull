@@ -11,12 +11,13 @@ import {
 import ComponentVault, { getComponentIcon } from './ComponentVault';
 import ChassisCanvas from './ChassisCanvas';
 import PinoutTracker from './PinoutTracker';
+import BomTracker from './BomTracker';
 import { getComponent } from '../../data/componentCatalog';
 import { useBuilderStore } from '../../store/builderStore';
 import type { ZoneId } from '../../types/component';
 
 // Phase 2: Vault + Chassis Canvas drag-and-drop. Phase 3: GPIO Pinout
-// Tracker. BOM/firmware generation is Phase 4 — see the project plan.
+// Tracker. Phase 4: BOM/firmware recommender + register the finished build.
 const DesignBuilder = () => {
   const placeComponent = useBuilderStore((s) => s.placeComponent);
   const clearBuild = useBuilderStore((s) => s.clearBuild);
@@ -65,8 +66,8 @@ const DesignBuilder = () => {
             </h1>
             <p className="mt-4 text-[#9fd8d4]">
               Drag components onto the chassis, then check the pinout
-              tracker for the auto-allocated GPIO connection manifest. BOM
-              generation is still under construction.
+              tracker and bill of materials for the auto-generated GPIO
+              manifest and procurement/firmware readout.
             </p>
           </div>
           <button
@@ -90,6 +91,7 @@ const DesignBuilder = () => {
               <ChassisCanvas message={message} />
 
               <PinoutTracker />
+              <BomTracker />
             </div>
           </div>
 

@@ -1,6 +1,7 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import units from '../../data/units.json';
+import legacyUnits from '../../data/units.json';
+import { fetchUnits } from '../../lib/unitsApi';
 import type { Unit, UnitStatus } from '../../types/unit';
 
 // STATUS vocabulary per docs/REGISTRATION_TRACKING.md / LORE_COMPENDIUM.md §3.
@@ -91,10 +92,40 @@ const UnitCard = ({ unit }: { unit: Unit }) => (
   </div>
 );
 
-const allUnits = units as Unit[];
+// The 2 legacy Black Library canon-reference entries (docs/LORE_COMPENDIUM.md
+// §1/§4) — not physical builds, so they aren't in Supabase; kept as a small
+// static list merged in client-side after the live fetch resolves.
+const legacyReferenceUnits = legacyUnits as Unit[];
 
 const CodexTable = () => {
   const [query, setQuery] = useState('');
+  const [registeredUnits, setRegisteredUnits] = useState<Unit[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [fetchError, setFetchError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchUnits()
+      .then((rows) => {
+        if (!cancelled) setRegisteredUnits(rows);
+      })
+      .catch((err) => {
+        if (!cancelled) {
+          setFetchError(err instanceof Error ? err.message : 'Failed to load registered units.');
+        }
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const allUnits = useMemo(
+    () => [...registeredUnits, ...legacyReferenceUnits],
+    [registeredUnits]
+  );
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -104,7 +135,7 @@ const CodexTable = () => {
         .filter(Boolean)
         .some((field) => field!.toLowerCase().includes(q))
     );
-  }, [query]);
+  }, [query, allUnits]);
 
   return (
     <div className="min-h-screen bg-black px-6 py-16 sm:px-12">
@@ -114,9 +145,17 @@ const CodexTable = () => {
         </h1>
         <p className="mt-4 text-[#9fd8d4]">
           The operative register — one entry per servo-skull, built,
-          deployed, or canon-referenced. Sourced from{' '}
+          deployed, or canon-referenced. Registered units are pulled live
+          from the Codex registry; canon-reference entries (Black Library
+          fiction) are sourced from{' '}
           <code className="text-[#72eaf6]">src/data/units.json</code>.
         </p>
+        {fetchError && (
+          <p className="mt-2 text-sm text-amber-400">
+            Couldn't load registered units ({fetchError}) — showing
+            canon-reference entries only.
+          </p>
+        )}
 
         <div className="mt-6 flex flex-wrap items-center gap-4">
           <input
@@ -141,15 +180,19 @@ const CodexTable = () => {
         </div>
 
         <div className="mt-10 space-y-6">
-          {allUnits.length === 0 ? (
+          {loading ? (
+            <p className="text-center text-sm text-[#5a8f8c]">Loading register…</p>
+          ) : allUnits.length === 0 ? (
             <div className="rounded-lg border border-dashed border-[#2a4a48] bg-[#0a1615] p-8 text-center">
               <p className="text-[#D4FFFD]">No units registered yet.</p>
               <p className="mt-2 text-sm text-[#9fd8d4]">
-                When the first physical unit is built, add an entry to{' '}
-                <code className="text-[#72eaf6]">src/data/units.json</code>{' '}
-                following the schema in the{' '}
-                <Link to="/codex/docs/registration-tracking" className="text-[#72eaf6] underline underline-offset-4">
-                  field reference
+                Finish a build in the{' '}
+                <Link to="/design" className="text-[#72eaf6] underline underline-offset-4">
+                  Design Servitor Skull
+                </Link>{' '}
+                builder, then{' '}
+                <Link to="/codex/register" className="text-[#72eaf6] underline underline-offset-4">
+                  register it
                 </Link>{' '}
                 — it'll show up here automatically.
               </p>
