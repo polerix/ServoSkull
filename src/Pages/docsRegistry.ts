@@ -5,6 +5,7 @@ import programmingReference from '../../docs/PROGRAMMING_REFERENCE.md?raw';
 import firmware from '../../docs/FIRMWARE.md?raw';
 import registrationTracking from '../../docs/REGISTRATION_TRACKING.md?raw';
 import loreCompendium from '../../docs/LORE_COMPENDIUM.md?raw';
+import temporalIntegrityProtocols from '../../docs/TEMPORAL_INTEGRITY_PROTOCOLS.md?raw';
 
 export interface Doc {
   slug: string;
@@ -37,6 +38,12 @@ export const docs: Doc[] = [
     title: 'Lore Compendium',
     blurb: 'Canon research — servo-skull roles, named exceptions, and status precedent, sourced from Black Library fiction.',
     content: loreCompendium,
+  },
+  {
+    slug: 'temporal-integrity-protocols',
+    title: 'Temporal Integrity Protocols',
+    blurb: 'Sourcing rationale — 2026 terrestrial component substitutes for Imperium-spec hardware.',
+    content: temporalIntegrityProtocols,
   },
 ];
 

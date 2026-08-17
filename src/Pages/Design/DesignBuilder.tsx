@@ -10,18 +10,16 @@ import {
 } from '@dnd-kit/core';
 import ComponentVault, { getComponentIcon } from './ComponentVault';
 import ChassisCanvas from './ChassisCanvas';
+import PinoutTracker from './PinoutTracker';
 import { getComponent } from '../../data/componentCatalog';
 import { useBuilderStore } from '../../store/builderStore';
 import type { ZoneId } from '../../types/component';
 
-// Phase 2: Vault + Chassis Canvas drag-and-drop. GPIO pin logic and
-// BOM/firmware generation are Phases 3–4 — see the project plan.
+// Phase 2: Vault + Chassis Canvas drag-and-drop. Phase 3: GPIO Pinout
+// Tracker. BOM/firmware generation is Phase 4 — see the project plan.
 const DesignBuilder = () => {
   const placeComponent = useBuilderStore((s) => s.placeComponent);
   const clearBuild = useBuilderStore((s) => s.clearBuild);
-  const cranialCount = useBuilderStore(
-    (s) => s.placements['cranial-cavity']?.length ?? 0
-  );
 
   const [activeComponentId, setActiveComponentId] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
@@ -66,9 +64,9 @@ const DesignBuilder = () => {
               ✠ Design Servitor Skull ✠
             </h1>
             <p className="mt-4 text-[#9fd8d4]">
-              Drag components onto the chassis, wire up GPIO, and generate a
-              bill of materials. GPIO and BOM generation are still under
-              construction.
+              Drag components onto the chassis, then check the pinout
+              tracker for the auto-allocated GPIO connection manifest. BOM
+              generation is still under construction.
             </p>
           </div>
           <button
@@ -91,16 +89,7 @@ const DesignBuilder = () => {
             <div className="flex flex-col gap-4">
               <ChassisCanvas message={message} />
 
-              <div className="rounded-lg border border-dashed border-[#2a4a48] bg-[#0a1615] p-6">
-                <h2 className="font-copperplate text-lg text-[#72eaf6]">
-                  Pinout Tracker
-                </h2>
-                <p className="mt-2 text-sm text-[#9fd8d4]">
-                  {cranialCount > 0
-                    ? `${cranialCount} Core Processing module${cranialCount === 1 ? '' : 's'} placed — pin assignment lands in Phase 3.`
-                    : 'GPIO matrix and connection manifest — populates once a Core Processing module is placed on the canvas.'}
-                </p>
-              </div>
+              <PinoutTracker />
             </div>
           </div>
 

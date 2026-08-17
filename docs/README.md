@@ -14,6 +14,7 @@ showcase presents the project; these documents run it.
 | [`FIRMWARE.md`](./FIRMWARE.md) | Raspberry Pi build target — GPIO map, subsystem scripts, install/boot sequence |
 | [`REGISTRATION_TRACKING.md`](./REGISTRATION_TRACKING.md) | Per-unit asset register — one entry per physical skull you build/deploy |
 | [`LORE_COMPENDIUM.md`](./LORE_COMPENDIUM.md) | Canon research — servo-skull roles, named exceptions, and status precedent, sourced from Black Library fiction |
+| [`TEMPORAL_INTEGRITY_PROTOCOLS.md`](./TEMPORAL_INTEGRITY_PROTOCOLS.md) | Sourcing rationale — 2026 terrestrial component substitutes for Imperium-spec hardware |
 
 ## Status note
 
