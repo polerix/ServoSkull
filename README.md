@@ -78,3 +78,22 @@ and the site rebuilds and redeploys automatically.
 The source code in this repository is released under the [MIT License](LICENSE).
 
 Third-party material bundled in this repository (fonts, audio, video, artwork, saved web pages and similar files) is **not** covered by that license. It remains the property of its respective owners and is included under their own terms. If you are a rights holder and want something removed, please open an issue.
+
+## Deployment & Repository Status
+
+- **Standardized Name**: `ServoSkull`
+- **Remote Origin**: `https://github.com/polerix/ServoSkull.git`
+- **License Level**: `MIT` ([`LICENSE`](LICENSE))
+- **Security Policy**: [`SECURITY.md`](SECURITY.md)
+- **GitHub Actions**: ✅ Active
+- **Last Compliance Audit**: `2026-10-18`
+
+### GitHub CleanUp Log
+- **Unused / Archive / Cache Items Moved to `/Volumes/Clay/GitHubCleanUp/ServoSkull/`**: 7 item(s) (23232 files, 327.48 MB)
+  - `dist` — Untracked local Vite build directory (15 file(s), 28.07 MB)
+  - `Emperor-Propaganda.jpg` — Untracked unreferenced image (1 file(s), 420.5 KB)
+  - `src/App.css` — Empty 0-byte unused CSS file (1 file(s), 0.0 KB)
+  - `node_modules` — Local dependency/build cache (node_modules) (23212 file(s), 298.98 MB)
+  - `.DS_Store` — OS metadata file (1 file(s), 6.0 KB)
+  - `src/.DS_Store` — OS metadata file (1 file(s), 6.0 KB)
+  - `src/Assets/.DS_Store` — OS metadata file (1 file(s), 6.0 KB)
