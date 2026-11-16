@@ -36,6 +36,17 @@ jobs:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
 
+      - name: Verify all HTML entries were built
+        run: |
+          missing=0
+          for f in *.html; do
+            if [ ! -f "dist/$f" ]; then
+              echo "::error::$f exists in the repo root but is missing from dist/ -- is it registered in vite.config's build.rollupOptions.input?"
+              missing=1
+            fi
+          done
+          exit $missing
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
