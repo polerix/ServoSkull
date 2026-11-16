@@ -38,6 +38,7 @@ jobs:
 
       - name: Verify all HTML entries were built
         run: |
+          shopt -s nullglob
           missing=0
           for f in *.html; do
             if [ ! -f "dist/$f" ]; then
