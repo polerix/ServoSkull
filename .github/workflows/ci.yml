@@ -1,0 +1,45 @@
+name: CI
+
+# Build-only gate for pull requests. Deliberately has no deploy steps,
+# no secrets and no Pages permissions: this job must not be able to publish.
+on:
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Verify all HTML entries were built
+        run: |
+          shopt -s nullglob
+          missing=0
+          for f in *.html; do
+            if [ ! -f "dist/$f" ]; then
+              echo "::error::$f exists in the repo root but is missing from dist/ -- is it registered in vite.config's build.rollupOptions.input?"
+              missing=1
+            fi
+          done
+          exit $missing
