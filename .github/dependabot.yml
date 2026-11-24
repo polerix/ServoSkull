@@ -1,21 +1,41 @@
-# Monthly, grouped, at most 3 open PRs: keeps automated PR and CI traffic low.
+# ServoSkull is a static site deployed to GitHub Pages, not a published package.
+#
+# Security updates are deliberately left alone: they still reach the shipped
+# bundle, and they are governed by their own fixed limit of 10 open PRs that
+# open-pull-requests-limit cannot change.
+#
+# Version updates are monthly and grouped to minor + patch only. Majors are
+# intentionally NOT in the groups: per GitHub's documented behaviour, "any
+# outdated dependencies that do not match a rule are updated in individual pull
+# requests", so a major still shows up -- as its own reviewable PR -- instead of
+# riding along with patch bumps. That bundling is what put React 18->19 and
+# Tailwind 3->4 into PR #15 alongside routine updates.
 version: 2
 updates:
-- package-ecosystem: github-actions
-  directory: /
-  schedule:
-    interval: monthly
-  open-pull-requests-limit: 3
-  groups:
-    all:
-      patterns:
-      - '*'
-- package-ecosystem: npm
-  directory: /
-  schedule:
-    interval: monthly
-  open-pull-requests-limit: 3
-  groups:
-    all:
-      patterns:
-      - '*'
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 3
+    groups:
+      npm-minor-and-patch:
+        applies-to: version-updates
+        patterns:
+          - '*'
+        update-types:
+          - minor
+          - patch
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 2
+    groups:
+      actions-minor-and-patch:
+        applies-to: version-updates
+        patterns:
+          - '*'
+        update-types:
+          - minor
+          - patch
