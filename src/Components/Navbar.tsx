@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import warhammer from "../Assets/warhammer.png";
-import warhammerVideo from "../Assets/file.mp4";
+import warhammerVideo from "../Assets/hero-loop.mp4";
+import warhammerPoster from "../Assets/hero-poster.jpg";
 import { Link } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
@@ -20,6 +21,9 @@ const Navbar = () => {
         autoPlay
         loop
         muted
+        playsInline
+        preload="metadata"
+        poster={warhammerPoster}
         src={warhammerVideo}
       ></video>
       <div className=" h-[800px] md:w-full grid grid-cols-3 m-auto justify-items-center absolute md:fixed z-10 overflow-hidden pointer-events-none">
